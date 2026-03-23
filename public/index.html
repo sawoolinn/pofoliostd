@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio - Scholarship Student">
+    <title>Jane Doe | Scholarship Portfolio</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Jane Doe.</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#academics">Academics</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-btn" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <p class="hero-subtitle">Scholarship Candidate & Undergrad Student</p>
+                <h1 class="hero-title">Aspiring to Innovate the Future.</h1>
+                <p class="hero-description">
+                    Passionate about merging technology and sustainability to solve real-world problems. Welcome to my personal portfolio.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <!-- Interactive decorative element placeholder -->
+            <div class="hero-decoration">
+                <div class="blob shape-1"></div>
+                <div class="blob shape-2"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section hidden-section">
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <div class="profile-wrapper">
+                            <div class="spinning-border"></div>
+                            <img src="my_pf.jpg" alt="Profile Photo" class="profile-img">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p id="about-p1">I am a highly motivated scholarship student pursuing a degree in Computer Science. My goal is to leverage my academic background to drive positive impact in the tech industry.</p>
+                        <p id="about-p2">Through various leadership roles and academic excellence, I have proven my dedication to continuous learning and community engagement.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <h3 id="stat-gpa-val">3.9</h3>
+                            <p id="stat-gpa-desc">Cumulative GPA</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 id="stat-projects-val">5+</h3>
+                            <p id="stat-projects-desc">Major Projects</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 id="stat-volunteering-val">100h</h3>
+                            <p id="stat-volunteering-desc">Volunteering</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academics Section -->
+        <section id="academics" class="academics-section hidden-section">
+            <div class="section-container">
+                <h2 class="section-title">Academic Achievements</h2>
+                <div class="timeline" id="academics-timeline">
+                    <!-- Injected via Excel -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section hidden-section">
+            <div class="section-container">
+                <h2 class="section-title">Work & Community Experience</h2>
+                <div class="timeline" id="experience-timeline">
+                    <!-- Injected via Excel -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section hidden-section">
+            <div class="section-container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card glass-card">
+                        <div class="project-content">
+                            <h3>EcoTech Initiative</h3>
+                            <p>A web platform connecting volunteers with local eco-friendly initiatives and tree-planting drives.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </article>
+                    <article class="project-card glass-card">
+                        <div class="project-content">
+                            <h3>Smart Campus Nav</h3>
+                            <p>An iOS application utilizing augmented reality to help new students navigate the university campus.</p>
+                            <div class="project-tags">
+                                <span>Swift</span>
+                                <span>ARKit</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section hidden-section">
+            <div class="section-container">
+                <div class="contact-wrapper glass-card">
+                    <div class="contact-info">
+                        <h2 class="section-title">Let's Connect</h2>
+                        <p>I am currently open to internship opportunities and discussions regarding academic research.</p>
+                        <ul class="contact-details">
+                            <li>📧 student@university.edu</li>
+                            <li>📍 Campus City, ST 12345</li>
+                        </ul>
+                    </div>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required rows="5" placeholder="Hi Jane..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+                        <p id="form-status" class="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Jane Doe. Designed for Excellence.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
