@@ -41,7 +41,7 @@ body::before {
     background-image: url('pattern.png');
     background-repeat: repeat;
     background-size: 350px;
-    opacity: 0.12; /* Adjusted for the new custom pattern */
+    opacity: 0.04; /* Very faint, premium watermark effect */
     pointer-events: none;
     z-index: -1;
 }
