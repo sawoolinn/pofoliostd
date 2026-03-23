@@ -214,11 +214,10 @@ a {
 }
 
 .hero-subtitle {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.85rem; /* Smaller size for complex Burmese script */
+    font-weight: 500;   /* Softer weight */
     color: var(--accent-primary);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px; /* Less spacing to prevent breaking Burmese syllables */
     margin-bottom: 1rem;
     animation: fadeInUp 0.8s ease-out;
 }
