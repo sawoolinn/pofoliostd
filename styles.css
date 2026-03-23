@@ -279,9 +279,43 @@ a {
     width: 300px;
     height: 300px;
     background: var(--accent-secondary);
-    bottom: 100px;
+    bottom: -50px;
     left: -50px;
     animation-delay: -5s;
+}
+
+/* Custom Cultural Art Element */
+.hero-cultural-art {
+    position: absolute;
+    right: 5%;
+    bottom: -10%;
+    width: 500px; /* Large statement piece */
+    height: auto;
+    opacity: 0.7; /* Semi-transparent so it glows beautifully against the dark background */
+    pointer-events: none;
+    z-index: 0;
+    filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.3)); /* Faint golden glow */
+    animation: floatCultural 8s ease-in-out infinite alternate;
+}
+
+@keyframes floatCultural {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-30px) rotate(2deg); }
+}
+
+@media (max-width: 768px) {
+    .hero-cultural-art {
+        width: 300px;
+        right: -20%;
+        bottom: 0;
+        opacity: 0.4;
+    }
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px) translateX(0px); }
+    100% { transform: translateY(-20px) translateX(20px); }
 }
 
 /* About Section */
