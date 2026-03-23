@@ -30,6 +30,20 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
+}
+
+/* Subtle Cultural Pattern Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background-image: url('pattern.png');
+    background-repeat: repeat;
+    background-size: 350px;
+    opacity: 0.04; /* Very faint, premium watermark effect */
+    pointer-events: none;
+    z-index: -1;
 }
 
 ul {
