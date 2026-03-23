@@ -66,7 +66,7 @@ app.get('/api/content', (req, res) => {
 });
 
 // Serve static frontend files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 // API endpoint for contact form submission
 app.post('/api/contact', (req, res) => {
@@ -85,7 +85,7 @@ app.post('/api/contact', (req, res) => {
 
 // Fallback to serve index.html for any other route (SPA behavior)
 app.use((req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Start the server
