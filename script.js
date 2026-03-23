@@ -159,13 +159,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (experienceTimeline) experienceTimeline.innerHTML = '';
 
                 data.timeline.forEach(item => {
+                    let displayTitle = item.Title;
+                    let displayDesc = item.Description;
+                    
+                    // Specific logic for Academics: Highlight Major, put University as description
+                    if (item.Section === 'Academics') {
+                        displayTitle = item.Description; // The Major
+                        displayDesc = item.Title; // The University
+                    }
+
                     const html = `
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content glass-card">
-                            <h3>${item.Title}</h3>
+                            <h3>${displayTitle}</h3>
                             <span class="timeline-date">${item.Date}</span>
-                            <p>${item.Description}</p>
+                            <p>${displayDesc}</p>
                         </div>
                     </div>`;
                     
