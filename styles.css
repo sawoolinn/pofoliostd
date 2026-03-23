@@ -232,7 +232,8 @@ a {
 }
 
 .hero-description {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Scaled down for dense Burmese script */
+    line-height: 1.8; /* Increased line-height so loops do not overlap */
     color: var(--text-secondary);
     margin-bottom: 2.5rem;
     max-width: 600px;
@@ -636,7 +637,7 @@ a {
     h1.hero-title { font-size: 2.2rem; line-height: 1.1; }
     h2.section-title { font-size: 1.8rem; margin-bottom: 2rem; }
     h3 { font-size: 1.2rem; }
-    p, .hero-description, .about-text p { font-size: 0.95rem; }
+    p, .hero-description, .about-text p { font-size: 0.85rem; } /* Further shrink on mobile for Burmese */
     .section-container { padding: 4rem 1.5rem; }
 
     .nav-links {
