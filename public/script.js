@@ -112,12 +112,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 
-    // 5. Fetch Full Content from Excel CMS API
+    // 5. Fetch Full Content from Excel CMS API (Now Static via GitHub Pages)
     async function loadContent() {
         try {
-            const res = await fetch('/api/content');
+            const res = await fetch('content.xlsx');
             if (!res.ok) return;
-            const data = await res.json();
+            const arrayBuffer = await res.arrayBuffer();
+            
+            // Parse Excel file in the browser using SheetJS
+            const wb = XLSX.read(arrayBuffer, { type: 'array' });
+            const data = {};
+            wb.SheetNames.forEach(sheetName => {
+                data[sheetName.toLowerCase()] = XLSX.utils.sheet_to_json(wb.Sheets[sheetName]);
+            });
             
             // Render Stats
             if (data.stats && data.stats.length > 0) {
